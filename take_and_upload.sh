@@ -2,5 +2,7 @@
 
 cd /home/pi/cam
 
-python3 camera_timestamp.py
-python3 aws_upload.py
+file_name="houston_traffic.jpg"
+
+python3 camera.py $file_name
+python3 aws_upload.py $file_name

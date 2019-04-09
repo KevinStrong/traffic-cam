@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 import boto3
+import sys
 
-file_name = 'houston_traffic.jpg'
+file_name = sys.argv[1]
 bucket = 'narcindin.com'
 
 metadata = {"Content-Type" : "image/jpeg"}

@@ -1,13 +1,15 @@
 #!/usr/bin/python3
+import sys
 import picamera 
 from time import sleep
 from subprocess import call
 from datetime import datetime
 
-fileName ="/home/pi/cam/picture.jpg"
+file_name = sys.argv[1]
+#fileName ="/home/pi/cam/picture.jpg"
 
-sleep(15)
 
 with picamera.PiCamera() as camera:
+    sleep(1)
     camera.resolution = (1280, 720)
-    camera.capture(fileName)
+    camera.capture(file_name)
