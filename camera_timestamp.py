@@ -7,6 +7,7 @@ from datetime import datetime
 fileName ="/home/pi/cam/houston_traffic.jpg"
 
 with picamera.PiCamera() as camera:
+    sleep(0.1) #let camera start up
     camera.resolution = (1280, 720)
     camera.capture(fileName)
 
