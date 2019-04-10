@@ -21,7 +21,7 @@ with picamera.PiCamera() as camera:
             camera.exposure_compensation -= int((average - THRESHOLD) /10)
         currentTime = datetime.now()
         timestampMessage = currentTime.strftime("%Y.%m.%d-%H:%M:%S") 
-        #camera.annotate_foreground = Color('red')
+        camera.annotate_background = Color('black')
         camera.annotate_text = timestampMessage 
         sleep(1)
         camera.capture(file_name)
