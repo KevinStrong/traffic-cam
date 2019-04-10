@@ -16,6 +16,6 @@ timestampMessage = currentTime.strftime("%Y.%m.%d-%H:%M:%S")
 with picamera.PiCamera() as camera:
     sleep(1)
     camera.resolution = (1280, 720)
-    camera.annotate_foreground = Color('red')
+    camera.annotate_background = Color('black')
     camera.annotate_text = timestampMessage 
     camera.capture(file_name)
